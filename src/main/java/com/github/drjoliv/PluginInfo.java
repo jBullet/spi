@@ -1,5 +1,12 @@
 package com.github.drjoliv;
 
+/**
+ * Information describing the Plugin it annotates.
+ */
 @interface PluginInfo {
-  String name();
+
+  /**
+   * The name of this Plugin.
+   */
+  public String name();
 }
