@@ -1,20 +1,82 @@
 package com.github.drjoliv;
 
-import java.util.List;
+import java.util.function.Consumer;
 
+import com.github.drjoliv.Event.GenericEvent;
+
+/**
+ * Provides services to Plugins.
+ * @author Desonte 'drjoliv' Joliver : drjoliv@gmail.com
+ */
 public interface PlatformServices {
 
-  public void attach(PlatformObserver observer);
+  /**
+   * Attaches an event listener to the jBullet platform.
+   * @param clazz the class of the event to listen for.
+   * @param consumer a function that consumes an event.
+   * @return true if the event listener was successfully attached.
+   */
+  public <T extends Event> boolean addEventListner(Class<T> clazz, Consumer<T> consumer);
 
-  public void detach(PlatformObserver observer);
+  /**
+   * Attaches an event listener to the jBullet platform.
+   * @param clazz the class of the event to listen for.
+   * @param consumera function that consumes an event.
+   * @param consumerId the id of the attached function.
+   * @return true if the event listener was successfully attached.
+   */
+  public <T extends Event> boolean addEventListner(Class<T> clazz, Consumer<T> consumer, String consumerId);
 
-  public List<Object> create(List<Object> items);
+  /**
+   * Attempts to attach an event listener to the jBullet platform and returns true if successful
+   * or false otherwise.
+   * @param eventName The name of the event the attached consume will listen for..
+   * @param consumer the event listener.
+   * @return true if the event listener was successfully attached.
+   */
+  public boolean addEventListener(String eventName, Consumer<GenericEvent> consumer);
 
-  public List<Object> read(List<String> ids);
+  /**
+   * Attempts to attach an event listener to the jBullet platform and returns true if successful
+   * or false otherwise.
+   * @param eventName The name of the event the attached consume will listen for..
+   * @param consumera a function that consumes an event.
+   * @param consumerId the id of the attached function.
+   * @return true if the event listener was successfully attached.
+   */
+  public boolean addEventListener(String eventName, Consumer<GenericEvent> consumer, String consumerId);
 
-  public List<Object> update(List<Object> items);
+  /**
+   * Attempts to remove an event listener to the jBullet platform and returns true if successful
+   * or false otherwise.
+   * @param consumerId the ID of an event listener.
+   * @return true if the event listener was successfully removed.
+   */
+  public boolean removeListener(String consumerId);
 
-  public List<Object> all(String type);
+  /**
+   * Attempts to emit an event to event listeners and returns true if successful and false otherwise.
+   * @param event the event to be emitted.
+   * @return true if the event was successfully emitted.
+   */
+  public boolean emit(Event event);
 
-  public List<Object> delete(List<Object> items);
+  /**
+   * Returns Graph representing the items stored within the jBullet DB.
+   * @return a Graph representing the items stored within the jBullet DB.
+   */
+  public Graph graph();
+
+  /**
+   * A NodeBuilder.
+   * @return a NodeBuilder.
+   */
+  public NodeBuilder nBuilder();
+
+  /**
+   * A NodeBuilder.
+   * @return a NodeBuilder.
+   */
+  public RelationshipBuilder rBuilder();
+
 }
