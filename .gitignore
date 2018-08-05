@@ -24,3 +24,7 @@ hs_err_pid*
 
 # project build folder
 /target
+
+# eclipse properties.
+.project
+.classpath
