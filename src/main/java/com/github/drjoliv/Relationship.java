@@ -18,7 +18,7 @@ public interface Relationship {
    * Returns a relationship label describing this relationship.
    * @return a relationship label describing this relationship.
    */
-  public RelationhsipLabel label();
+  public RelationshipLabel label();
 
   /**
    * Returns map of attributes of this node.
