@@ -1,8 +1,6 @@
-package com.github.drjoliv;
+package drjoliv.jbullet;
 
 import java.util.function.Consumer;
-
-import com.github.drjoliv.Event.GenericEvent;
 
 /**
  * Provides services to Plugins.

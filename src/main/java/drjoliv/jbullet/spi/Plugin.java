@@ -1,6 +1,6 @@
-package com.github.drjoliv.spi;
+package drjoliv.jbullet.spi;
 
-import com.github.drjoliv.PlatformServices;
+import drjoliv.jbullet.PlatformServices;
 
 /**
  * A plugin adds behaviour to the jBullet application.

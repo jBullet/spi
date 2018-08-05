@@ -1,5 +1,4 @@
-package com.github.drjoliv;
-
+package drjoliv.jbullet;
 
 /**
  * NodeBuilder presents a fluent API for building Nodes.

@@ -1,4 +1,4 @@
-package com.github.drjoliv;
+package drjoliv.jbullet;
 
 /**
  * Information describing the Plugin it annotates.

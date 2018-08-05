@@ -1,4 +1,4 @@
-package com.github.drjoliv;
+package drjoliv.jbullet;
 
 /**
  * An Event is emitted by the Platform Service to all attached listeners.

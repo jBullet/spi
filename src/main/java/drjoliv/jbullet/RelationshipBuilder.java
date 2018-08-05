@@ -1,4 +1,4 @@
-package com.github.drjoliv;
+package drjoliv.jbullet;
 
 /**
  * Builds relationships between nodes.
