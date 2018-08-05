@@ -2,6 +2,8 @@ package drjoliv.jbullet;
 
 import java.util.function.Consumer;
 
+import drjoliv.jbullet.Event.GenericEvent;
+
 /**
  * Provides services to Plugins.
  * @author Desonte 'drjoliv' Joliver : drjoliv@gmail.com
