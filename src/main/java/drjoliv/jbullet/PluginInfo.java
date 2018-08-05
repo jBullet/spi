@@ -3,7 +3,7 @@ package drjoliv.jbullet;
 /**
  * Information describing the Plugin it annotates.
  */
-@interface PluginInfo {
+public @interface PluginInfo {
 
   /**
    * The name of this Plugin.
